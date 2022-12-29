@@ -100,7 +100,7 @@ namespace Nodak.Controllers
                 }
             }
 
-            return CreatedAtRoute("api", new { id = student.Id }, student);
+            return CreatedAtRoute("api", new { Guid = student.Id=new Guid() }, student);
         }
 
         // DELETE: api/Students/5
