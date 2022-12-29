@@ -49,7 +49,7 @@ namespace Nodak.Controllers
 
             if (id != student.Id)
             {
-                return BadRequest("bad")  ;
+                return BadRequest()  ;
             }
 
             db.Entry(student).State = EntityState.Modified;
