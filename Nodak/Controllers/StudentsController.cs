@@ -40,7 +40,7 @@ namespace Nodak.Controllers
         [HttpPut]
         // PUT: api/Students/5
         [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutStudent(Guid id, Student student)
+        public async Task<IHttpActionResult> PutStudent(Guid id,[FromBody] Student student)
         {
             if (!ModelState.IsValid)
             {
@@ -49,7 +49,7 @@ namespace Nodak.Controllers
 
             if (id != student.Id)
             {
-                return BadRequest();
+                return BadRequest("bad")  ;
             }
 
             db.Entry(student).State = EntityState.Modified;
