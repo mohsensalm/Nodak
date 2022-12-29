@@ -37,7 +37,7 @@ namespace Nodak.Controllers
 
             return Ok(student);
         }
-
+        [HttpPut]
         // PUT: api/Students/5
         [ResponseType(typeof(void))]
         public async Task<IHttpActionResult> PutStudent(Guid id, Student student)
@@ -102,7 +102,7 @@ namespace Nodak.Controllers
 
             return CreatedAtRoute("api", new { id = student.Id }, student);
         }
-
+        [HttpDelete]
         // DELETE: api/Students/5
         [ResponseType(typeof(Student))]
         public async Task<IHttpActionResult> DeleteStudent(Guid id)
