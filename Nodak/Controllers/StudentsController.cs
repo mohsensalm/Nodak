@@ -70,7 +70,7 @@ namespace Nodak.Controllers
                 }
             }
 
-            return StatusCode(HttpStatusCode.NoContent);
+            return StatusCode(HttpStatusCode.OK);
         }
         [HttpPost]
         // POST: api/Students
