@@ -15,7 +15,7 @@ namespace Nodak
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(
-                name: "Api",
+                name: "api",
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
