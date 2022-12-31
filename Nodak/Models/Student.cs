@@ -22,7 +22,7 @@ namespace Nodak.Models
         public float Average { get; set; }
         public int ClassNumber { get; set; }
 
-        public  IQueryable<Course>Courses { get; set; }
+        public  IList<Course>Courses { get; set; }
 
 
     }
