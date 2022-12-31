@@ -8,6 +8,10 @@ namespace Nodak.Models
 {
     public class Course
     {
+        public Course()
+        {
+                
+        }
         [Key]
         public Guid Id { get; set; }
         public string Name { get; set; }
