@@ -17,6 +17,5 @@ namespace Nodak.Models
         public string Name { get; set; }
         public bool IsPass { get; set; }
         public int Score { get; set; }
-
     }
 }
