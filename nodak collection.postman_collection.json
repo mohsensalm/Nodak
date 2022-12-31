@@ -1,0 +1,152 @@
+{
+	"info": {
+		"_postman_id": "3ed998ab-3ac1-4c08-b1ad-b7c32c084227",
+		"name": "nodak collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12364236"
+	},
+	"item": [
+		{
+			"name": "https://localhost:44367/api/Students",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"{{$guid}}\",\r\n\"Name\":\"mohsen\",\r\n\"Family\":\"hoseiny\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44367/api/Students",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44367",
+					"path": [
+						"api",
+						"Students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44367/api/Students",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44367/api/Students",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44367",
+					"path": [
+						"api",
+						"Students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44367/api/Students/F9F6BD56-E594-4F42-9731-27FC044948FC",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"F9F6BD56-E594-4F42-9731-27FC044948FC\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44367/api/Students/F9F6BD56-E594-4F42-9731-27FC044948FC",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44367",
+					"path": [
+						"api",
+						"Students",
+						"F9F6BD56-E594-4F42-9731-27FC044948FC"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44367/api/Students",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"4F8F6464-40E1-41F0-A1BA-4E56C6BE59DB\",\r\n    \"ClassNumber\": 8090\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44367/api/Students/4F8F6464-40E1-41F0-A1BA-4E56C6BE59DB",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44367",
+					"path": [
+						"api",
+						"Students",
+						"4F8F6464-40E1-41F0-A1BA-4E56C6BE59DB"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44367/api/Students/66F62F5B-6044-4560-9EAC-04DBD01A29FB",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44367/api/Students/66F62F5B-6044-4560-9EAC-04DBD01A29FB",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44367",
+					"path": [
+						"api",
+						"Students",
+						"66F62F5B-6044-4560-9EAC-04DBD01A29FB"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

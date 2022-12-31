@@ -21,6 +21,9 @@ namespace Nodak.Models
         public string Address { get; set; }
         public float Average { get; set; }
         public int ClassNumber { get; set; }
-        // Course course; 
+
+        public  IQueryable<Course>Courses { get; set; }
+
+
     }
 }

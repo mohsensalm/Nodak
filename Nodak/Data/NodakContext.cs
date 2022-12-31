@@ -20,5 +20,9 @@ namespace Nodak.Data
         }
 
         public System.Data.Entity.DbSet<Nodak.Models.Student> Students { get; set; }
+        public System.Data.Entity.DbSet<Nodak.Models.Teacher> Teachers { get; set; }
+        public System.Data.Entity.DbSet<Nodak.Models.Course> Courses { get; set; }
+
+
     }
 }
