@@ -109,6 +109,7 @@
     <Compile Include="App_Start\MapingProfile.cs" />
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\CoursesController.cs" />
     <Compile Include="Controllers\mosh controllers\exstController.cs" />
     <Compile Include="Controllers\StudentsController.cs" />
     <Compile Include="Controllers\TeachersController.cs" />
