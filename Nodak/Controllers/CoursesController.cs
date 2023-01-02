@@ -73,9 +73,11 @@ namespace Nodak.Controllers
         }
 
         // POST: api/Courses
+        [HttpPost]
         [ResponseType(typeof(Course))]
         public async Task<IHttpActionResult> PostCourse(Course course)
         {
+            course.Id = Guid.NewGuid();
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
