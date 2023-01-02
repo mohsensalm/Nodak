@@ -78,12 +78,11 @@ namespace Nodak.Controllers
         public async Task<IHttpActionResult> PostTeacher(Teacher teacher)
         {
             teacher.Id = Guid.NewGuid();        
-            teacher.Course.Id = Guid.NewGuid(); 
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-
+            teacher.Course.Id = Guid.NewGuid(); 
             db.Teachers.Add(teacher);
 
             try
@@ -102,7 +101,7 @@ namespace Nodak.Controllers
                 }
             }
 
-            return CreatedAtRoute("DefaultApi", new { id = teacher.Id }, teacher);
+            return CreatedAtRoute("Api", new { id = teacher.Id }, teacher);
         }
 
         // DELETE: api/Teachers/5
