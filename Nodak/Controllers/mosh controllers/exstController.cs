@@ -64,8 +64,6 @@ namespace Nodak.Controllers.mosh_controllers
                 throw new HttpResponseException(HttpStatusCode.NotFound);
             _context.Students.Remove(studentInDb);
             _context.SaveChangesAsync();
-
-
         }
 
     }

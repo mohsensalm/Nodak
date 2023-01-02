@@ -14,45 +14,44 @@ using Nodak.Models;
 
 namespace Nodak.Controllers
 {
-    //[Route("api/[Controller]")]
-    public class StudentsController : ApiController
+    public class TeachersController : ApiController
     {
         private NodakContext db = new NodakContext();
 
-        // GET: api/Students
-        public IQueryable<Student> GetStudents()
+        // GET: api/Teachers
+        public IQueryable<Teacher> GetTeachers()
         {
-            return db.Students;
+            return db.Teachers;
         }
-        [HttpGet]
-        // GET: api/Students/5
-        [ResponseType(typeof(Student))]
-        public async Task<IHttpActionResult> GetStudent(Guid id)
+
+        // GET: api/Teachers/5
+        [ResponseType(typeof(Teacher))]
+        public async Task<IHttpActionResult> GetTeacher(Guid id)
         {
-            Student student = await db.Students.FindAsync(id);
-            if (student == null)
+            Teacher teacher = await db.Teachers.FindAsync(id);
+            if (teacher == null)
             {
                 return NotFound();
             }
 
-            return Ok(student);
+            return Ok(teacher);
         }
-        [HttpPut]
-        // PUT: api/Students/5
+
+        // PUT: api/Teachers/5
         [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutStudent(Guid id,[FromBody] Student student)
+        public async Task<IHttpActionResult> PutTeacher(Guid id, Teacher teacher)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != student.Id)
+            if (id != teacher.Id)
             {
-                return BadRequest()  ;
+                return BadRequest();
             }
 
-            db.Entry(student).State = EntityState.Modified;
+            db.Entry(teacher).State = EntityState.Modified;
 
             try
             {
@@ -60,7 +59,7 @@ namespace Nodak.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!StudentExists(id))
+                if (!TeacherExists(id))
                 {
                     return NotFound();
                 }
@@ -70,20 +69,19 @@ namespace Nodak.Controllers
                 }
             }
 
-            return StatusCode(HttpStatusCode.OK);
+            return StatusCode(HttpStatusCode.NoContent);
         }
-        [HttpPost]
-        // POST: api/Students
-        [ResponseType(typeof(Student))]
-        public async Task<IHttpActionResult> PostStudent(Student student)
+
+        // POST: api/Teachers
+        [ResponseType(typeof(Teacher))]
+        public async Task<IHttpActionResult> PostTeacher(Teacher teacher)
         {
-            student.Id = Guid.NewGuid();
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-            
-            db.Students.Add(student);
+
+            db.Teachers.Add(teacher);
 
             try
             {
@@ -91,7 +89,7 @@ namespace Nodak.Controllers
             }
             catch (DbUpdateException)
             {
-                if (StudentExists(student.Id))
+                if (TeacherExists(teacher.Id))
                 {
                     return Conflict();
                 }
@@ -101,23 +99,23 @@ namespace Nodak.Controllers
                 }
             }
 
-            return CreatedAtRoute("api", new { id = student.Id }, student);
+            return CreatedAtRoute("DefaultApi", new { id = teacher.Id }, teacher);
         }
-        [HttpDelete]
-        // DELETE: api/Students/5
-        [ResponseType(typeof(Student))]
-        public async Task<IHttpActionResult> DeleteStudent(Guid id)
+
+        // DELETE: api/Teachers/5
+        [ResponseType(typeof(Teacher))]
+        public async Task<IHttpActionResult> DeleteTeacher(Guid id)
         {
-            Student student = await db.Students.FindAsync(id);
-            if (student == null)
+            Teacher teacher = await db.Teachers.FindAsync(id);
+            if (teacher == null)
             {
                 return NotFound();
             }
 
-            db.Students.Remove(student);
+            db.Teachers.Remove(teacher);
             await db.SaveChangesAsync();
 
-            return Ok(student);
+            return Ok(teacher);
         }
 
         protected override void Dispose(bool disposing)
@@ -129,9 +127,9 @@ namespace Nodak.Controllers
             base.Dispose(disposing);
         }
 
-        private bool StudentExists(Guid id)
+        private bool TeacherExists(Guid id)
         {
-            return db.Students.Count(e => e.Id == id) > 0;
+            return db.Teachers.Count(e => e.Id == id) > 0;
         }
     }
 }
