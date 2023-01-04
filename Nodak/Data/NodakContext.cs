@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
+using Nodak.Models;
 
 namespace Nodak.Data
 {
@@ -19,9 +20,21 @@ namespace Nodak.Data
         {
         }
 
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            //modelBuilder.Entity<Student>()
+            //    .HasMany(v=>v.Courses)
+            //    .WithOptional(e=>e.Id)
+
+            //    .Property(t => t.Name)
+            //    .HasMaxLength(90)
+            //    .IsRequired();
+        }
+
         public System.Data.Entity.DbSet<Nodak.Models.Student> Students { get; set; }
         public System.Data.Entity.DbSet<Nodak.Models.Teacher> Teachers { get; set; }
         public System.Data.Entity.DbSet<Nodak.Models.Course> Courses { get; set; }
+
 
 
     }

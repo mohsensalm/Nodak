@@ -7,13 +7,13 @@ namespace Nodak.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class fifth : IMigrationMetadata
+    public sealed partial class six : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(fifth));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(six));
         
         string IMigrationMetadata.Id
         {
-            get { return "202301040656398_fifth"; }
+            get { return "202301040837561_six"; }
         }
         
         string IMigrationMetadata.Source

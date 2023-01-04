@@ -136,9 +136,9 @@
     <Compile Include="Migrations\202301011027002_forth.designer.cs">
       <DependentUpon>202301011027002_forth.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202301040656398_fifth.cs" />
-    <Compile Include="Migrations\202301040656398_fifth.designer.cs">
-      <DependentUpon>202301040656398_fifth.cs</DependentUpon>
+    <Compile Include="Migrations\202301040837561_six.cs" />
+    <Compile Include="Migrations\202301040837561_six.designer.cs">
+      <DependentUpon>202301040837561_six.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Course.cs" />
@@ -171,8 +171,8 @@
     <EmbeddedResource Include="Migrations\202301011027002_forth.resx">
       <DependentUpon>202301011027002_forth.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202301040656398_fifth.resx">
-      <DependentUpon>202301040656398_fifth.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202301040837561_six.resx">
+      <DependentUpon>202301040837561_six.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

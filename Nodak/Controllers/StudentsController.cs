@@ -14,6 +14,7 @@ using Nodak.Models;
 
 namespace Nodak.Controllers
 {
+    
     //[Route("api/[Controller]")]
     public class StudentsController : ApiController
     {
@@ -75,7 +76,7 @@ namespace Nodak.Controllers
         [HttpPost]
         // POST: api/Students
         [ResponseType(typeof(Student))]
-        public async Task<IHttpActionResult> PostStudent(Student student, IList<Course> courses)
+        public async Task<IHttpActionResult> PostStudent(Student student)
         {
             student.Id = Guid.NewGuid();
 
