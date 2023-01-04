@@ -117,6 +117,7 @@
     <Compile Include="Dtos\CourseDto.cs" />
     <Compile Include="Dtos\StudentDto.cs" />
     <Compile Include="Dtos\TeacherDto.cs" />
+    <Compile Include="FluentEntitis\FluentEntitis.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -139,6 +140,10 @@
     <Compile Include="Migrations\202301040837561_six.cs" />
     <Compile Include="Migrations\202301040837561_six.designer.cs">
       <DependentUpon>202301040837561_six.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301041137402_seventh.cs" />
+    <Compile Include="Migrations\202301041137402_seventh.designer.cs">
+      <DependentUpon>202301041137402_seventh.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Course.cs" />
@@ -173,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202301040837561_six.resx">
       <DependentUpon>202301040837561_six.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301041137402_seventh.resx">
+      <DependentUpon>202301041137402_seventh.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

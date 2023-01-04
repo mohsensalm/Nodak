@@ -82,7 +82,6 @@ namespace Nodak.Controllers
             {
                 return BadRequest(ModelState);
             }
-            teacher.Course.Id = Guid.NewGuid(); 
             db.Teachers.Add(teacher);
 
             try
