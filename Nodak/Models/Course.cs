@@ -10,7 +10,7 @@ namespace Nodak.Models
     {
         public Course()
         {
-                
+                Id = Guid.NewGuid();    
         }
         [Key]
         public Guid Id { get; set; }

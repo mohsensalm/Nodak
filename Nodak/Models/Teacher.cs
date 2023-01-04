@@ -21,7 +21,7 @@ namespace Nodak.Models
         public string Address { get; set; }
         public bool IsMarried { get; set; }
         public int InCome { get; set; }
-        public Course Course { get; set; }
+        public IList<Course> Course { get; set; }
 
     }
 }

@@ -75,15 +75,16 @@ namespace Nodak.Controllers
         [HttpPost]
         // POST: api/Students
         [ResponseType(typeof(Student))]
-        public async Task<IHttpActionResult> PostStudent(Student student)
+        public async Task<IHttpActionResult> PostStudent(Student student, IList<Course> courses)
         {
             student.Id = Guid.NewGuid();
+
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-            
             db.Students.Add(student);
+            //db.Courses.Add((Course)courses);
 
             try
             {
