@@ -11,8 +11,12 @@ namespace Nodak.FluentEntitis
     {
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            //  modelBuilder.Entity<Course>()
-              
+            modelBuilder.Entity<Student>()
+                .HasMany(v => v.Courses)
+                .WithRequired(c => c.Student)
+                .HasForeignKey(h => h.Student.Id);
+
+
         }
     }
 }

@@ -145,6 +145,10 @@
     <Compile Include="Migrations\202301041137402_seventh.designer.cs">
       <DependentUpon>202301041137402_seventh.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202301041145518_eight.cs" />
+    <Compile Include="Migrations\202301041145518_eight.designer.cs">
+      <DependentUpon>202301041145518_eight.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Student.cs" />
@@ -181,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202301041137402_seventh.resx">
       <DependentUpon>202301041137402_seventh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301041145518_eight.resx">
+      <DependentUpon>202301041145518_eight.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
