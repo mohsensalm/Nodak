@@ -9,6 +9,8 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
+using System.Web.UI.WebControls;
+using Microsoft.AspNetCore.Mvc;
 using Nodak.Data;
 using Nodak.Models;
 
@@ -16,7 +18,7 @@ namespace Nodak.Controllers
 {
     
     //[Route("api/[Controller]")]
-    public class StudentsController : ApiController
+    public class StudentsController : ApiController 
     {
         private NodakContext db = new NodakContext();
 
@@ -25,7 +27,7 @@ namespace Nodak.Controllers
         {
             return db.Students;
         }
-        [HttpGet]
+        [System.Web.Http.HttpGet]
         // GET: api/Students/5
         [ResponseType(typeof(Student))]
         public async Task<IHttpActionResult> GetStudent(Guid id)
@@ -38,10 +40,10 @@ namespace Nodak.Controllers
 
             return Ok(student);
         }
-        [HttpPut]
+        [System.Web.Http.HttpPut]
         // PUT: api/Students/5
         [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutStudent(Guid id,[FromBody] Student student)
+        public async Task<IHttpActionResult> PutStudent(Guid id,[System.Web.Http.FromBody] Student student)
         {
             if (!ModelState.IsValid)
             {
@@ -73,7 +75,7 @@ namespace Nodak.Controllers
 
             return StatusCode(HttpStatusCode.OK);
         }
-        [HttpPost]
+        [System.Web.Http.HttpPost]
         // POST: api/Students
         [ResponseType(typeof(Student))]
         public async Task<IHttpActionResult> PostStudent(Student student)
@@ -105,7 +107,7 @@ namespace Nodak.Controllers
 
             return CreatedAtRoute("api", new { id = student.Id }, student);
         }
-        [HttpDelete]
+        [System.Web.Http.HttpDelete]
         // DELETE: api/Students/5
         [ResponseType(typeof(Student))]
         public async Task<IHttpActionResult> DeleteStudent(Guid id)
@@ -135,5 +137,6 @@ namespace Nodak.Controllers
         {
             return db.Students.Count(e => e.Id == id) > 0;
         }
+
     }
 }
