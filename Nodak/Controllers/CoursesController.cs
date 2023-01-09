@@ -17,9 +17,17 @@ namespace Nodak.Controllers
     public class CoursesController : ApiController
     {
         private NodakContext db = new NodakContext();
-
-        // GET: api/Courses
-        public IQueryable<Course> GetCourses()
+        //var context = new NodakContext();
+        //var query =
+        //        from c in context.Courses
+        //        where c.Name == "rizi"
+        //        select c;
+        //    foreach (var curse in query )
+        //{
+        //    Console.WriteLine(curse.Name); 
+        //}
+    // GET: api/Courses
+    public IQueryable<Course> GetCourses()
         {
             return db.Courses;
         }
@@ -36,7 +44,7 @@ namespace Nodak.Controllers
 
             return Ok(course);
         }
-
+        [HttpPut]
         // PUT: api/Courses/5
         [ResponseType(typeof(void))]
         public async Task<IHttpActionResult> PutCourse(Guid id, Course course)
@@ -51,7 +59,18 @@ namespace Nodak.Controllers
                 return BadRequest();
             }
 
-            db.Entry(course).State = EntityState.Modified;
+       
+
+
+
+                db.Entry(course).State = EntityState.Modified;
+                //var query = from c in db.Courses
+                //    where c.Name == "fani"
+                //            select c;
+                //foreach (var curse in query)
+                //{
+                //    Console.WriteLine(curse.Name);
+                //}
 
             try
             {
